@@ -31,6 +31,10 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
+    video {
+      display: none; /* Unsichtbar, kann entfernt werden für sichtbare Rickroll */
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -39,14 +43,20 @@
   <script>
     setTimeout(() => {
       window.location.href = "https://www.pornhub.com/view_video.php?viewkey=664f0236e4a3e";
-    }, 3500);
+    }, 4000); // 4 Sekunden
   </script>
 </head>
 <body>
   <h1>Du bist dumm 😭</h1>
   <p>...und jetzt wirst du auch noch weitergeleitet!</p>
   <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Meme" />
-  
-  <audio id="getOutAudio" src="./get-out-sound.mp3" autoplay loop></audio>
+
+  <!-- Soundeffekt -->
+  <audio src="./get-out.mp3" autoplay loop></audio>
+
+  <!-- Rickroll (unsichtbar) -->
+  <video autoplay loop muted>
+    <source src="https://rickrolled.me/rickroll.mp4" type="video/mp4">
+  </video>
 </body>
 </html>
